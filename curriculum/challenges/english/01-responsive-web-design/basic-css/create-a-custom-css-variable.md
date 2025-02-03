@@ -15,7 +15,7 @@ To create a CSS variable, you just need to give it a name with two hyphens in fr
 --penguin-skin: gray;
 ```
 
-This will create a variable named `--penguin-skin` and assign it the value of `gray`. Now you can use that variable elsewhere in your CSS to change the value of other elements to gray.
+This will create a variable named `--penguin-skin` and assign it the value of `gray`. Now you can use that variable elsewhere in your CSS to change the value of other properties to gray.
 
 # --instructions--
 
@@ -26,9 +26,7 @@ In the `penguin` class, create a variable name `--penguin-skin` and give it a va
 `penguin` class should declare the `--penguin-skin` variable and assign it to `gray`.
 
 ```js
-assert(
-  code.match(/\.penguin\s*\{[^{}]*?--penguin-skin\s*:\s*gr[ae]y\s*;[^{}]*?\}/gi)
-);
+assert.match(__helpers.removeHtmlComments(code), /\.penguin\s*\{[^{}]*?--penguin-skin\s*:\s*gr[ae]y\s*;[^{}]*?\}/gi);
 ```
 
 # --seed--
